@@ -1,0 +1,91 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum BorrowingStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  RETURNED
+}
+
+model User {
+  id         String      @id @default(uuid())
+  name       String
+  nis        String?     @unique
+  email      String      @unique
+  password   String
+  role       Role        @default(STUDENT)
+  className  String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  borrowings Borrowing[]
+
+  @@map("users")
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  books       Book[]
+
+  @@map("categories")
+}
+
+model Book {
+  id              String      @id @default(uuid())
+  title           String
+  author          String
+  isbn            String      @unique
+  publisher       String
+  publicationYear Int
+  description     String?     @db.Text
+  coverUrl        String?     @db.Text
+  categoryId      String
+  totalStock      Int         @default(1)
+  availableStock  Int         @default(1)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  category        Category    @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  borrowings      Borrowing[]
+
+  @@index([categoryId])
+  @@map("books")
+}
+
+model Borrowing {
+  id         String          @id @default(uuid())
+  userId     String
+  bookId     String
+  borrowDate DateTime        @default(now())
+  dueDate    DateTime
+  approvedAt DateTime?
+  returnedAt DateTime?
+  status     BorrowingStatus @default(PENDING)
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+
+  user       User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  book       Book            @relation(fields: [bookId], references: [id], onDelete: Restrict)
+
+  @@index([userId])
+  @@index([bookId])
+  @@index([status])
+  @@map("borrowings")
+}

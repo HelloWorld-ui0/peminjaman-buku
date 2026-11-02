@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#0051d5", "surface-bright": "#f7f9fb", "secondary-fixed-dim": "#b4c5ff", "error-container": "#ffdad6", "on-secondary-fixed": "#00174b", "on-background": "#191c1e", "tertiary-fixed": "#d3e4fe", "inverse-on-surface": "#eff1f3", "surface-variant": "#e0e3e5", "surface-dim": "#d8dadc", "tertiary-fixed-dim": "#b7c8e1", "outline": "#767680", "on-secondary-fixed-variant": "#003ea8", "surface": "#f7f9fb", "on-error-container": "#93000a", "primary": "#000f3f", "background": "#f7f9fb", "on-tertiary-fixed": "0b1c30", "on-surface": "#191c1e", "on-primary": "#ffffff", "on-error": "#ffffff", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b7c4fd", "tertiary-container": "#19293d", "error": "#ba1a1a", "inverse-primary": "#b7c4fd", "inverse-surface": "#2d3133", "outline-variant": "#c6c5d0", "on-primary-fixed-variant": "#374475", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#38485d", "on-secondary": "#ffffff", "secondary-container": "#316bf3", "primary-container": "#172554", "primary-fixed": "#dce1ff", "surface-container": "#eceef0", "on-primary-fixed": "#071747", "surface-container-low": "#f2f4f6", "surface-container-highest": "#e0e3e5", "on-tertiary-container": "#8090a8", "surface-tint": "#4f5c8e", "surface-container-lowest": "#ffffff", "on-primary-container": "#808dc2", "on-surface-variant": "#45464f", "surface-container-high": "#e6e8ea", "on-secondary-container": "#fefcff", "tertiary": "#031427" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-md": "1rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xl": "2rem" }, "fontFamily": { "headline-xl": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "data-num-sm": [ "Inter" ], "data-num-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-xs": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ] }, "fontSize": { "headline-xl": [ "36px", { "lineHeight": "44px", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "data-num-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "data-num-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-xs": [ "10px", { "lineHeight": "14px", "fontWeight": "600" } ], "label-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "700" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "30px", "fontWeight": "600" } ], "label-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="LIBRARYKU Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wg-Jrsp8Sa3Z1ZNP0HLoRtwsVfsDIPV8ys3x6P2_dNjwTwa6HNon1MxW9LHCt03JAUZ14M_vkjBO99EE51MFJcwfBD7TtnIPBzQyFTJMXjce7oOTvh3GxpR5Zy5FHXCxABbypZkNBYnDPkGXkuUss84yt1vok_CDwrAJElSzvtmLUL5oSSyaEKt0xWTQTRsbbzrvD42r8dp5ZlrMz_4tKj_VFWbO-DGuYOGNM_I6_Tyw"/><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">LIBRARYKU</span><span class="font-label-xs text-label-xs text-on-surface-variant">SMA Harapan Bangsa</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Student Portal</div></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="explore-books" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Explore Books</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary font-label-md" data-path="my-borrowings" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span>My Borrowings</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="borrowing-history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span>Borrowing History</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span>Notifications</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>My Profile</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-sm text-label-sm" data-path="role-switcher" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">swap_horiz</span><span>Switch to Staff</span></div><span class="font-label-xs text-label-xs bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant">Librarian</span></a><a class="flex items-center gap-space-xs px-space-sm py-2 rounded text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-sm text-label-sm" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Log Out</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-12 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-[0_1px_2px_rgba(15,23,42,0.05)] focus:outline-none focus:ring-2 focus:ring-secondary/30" placeholder="Search titles, authors, ISBN, or call number..." type="text"/><div class="absolute right-3 flex items-center gap-0.5"><kbd class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded font-label-xs text-label-xs">⌘K</kbd></div></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs"><span class="material-symbols-outlined text-[16px]">schedule</span><span>Next return: 2 days left (1 book)</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-[10px] font-semibold text-on-error">3</span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Ahmad Rayhan</span><span class="font-label-xs text-label-xs text-on-surface-variant">NIS: 20241088</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_2px_rgba(15,23,42,0.1)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiz6miogZbAARcac-0WeuOZ0BFfOJ2ioXLmE-mFlSP6YaQCF0P6YcHXtGSaaixQ78UE0HSgD-z7EYQ_Gp8sOcJM-jXKeGMhpMLvZMLLqNQLLou1zEU_4I4Ft6Z-tfxuKwYncSEYKnDkj952Jp5kMZX5uR2vqnJ12VE0BpQ_uj2NHBZhZGeyRKZ-xuqr4DmmOXGzH5gyb-fcQUurFcOhvzE_oJdxQ6xXPLwsOLhiS0Z"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-y-6">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs uppercase tracking-wider font-semibold">Sirkulasi Siswa</span>
+<span class="text-on-surface-variant text-label-xs font-label-xs">• Semester Ganjil 2024/2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Peminjaman Saya</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Kelola buku yang sedang kamu pinjam, riwayat pengembalian, dan perpanjangan masa pinjam secara mandiri.
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container text-on-surface flex items-center gap-2 font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">history_edu</span>
+<span>Panduan Denda</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-secondary text-on-secondary shadow-sm hover:bg-secondary-container flex items-center gap-2 font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Cari Buku Baru</span>
+</button>
+</div>
+</div>
+<!-- Quick Stats Cards (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1: Sedang Dipinjam -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Buku Aktif Dipinjam</span>
+<div class="flex items-baseline gap-1.5 pt-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">eksemplar</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Batas serentak: 3 buku</span>
+</div>
+</div>
+<!-- Stat 2: Perlu Dikembalikan Segera -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Perlu Dikembalikan</span>
+<div class="flex items-baseline gap-1.5 pt-1">
+<span class="font-headline-xl text-headline-xl text-error font-bold">1</span>
+<span class="font-body-sm text-body-sm text-error font-medium">buku</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[22px]">event_upcoming</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-error-container font-label-xs text-label-xs bg-error-container/40 px-2 py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-semibold">Jatuh tempo 2 hari lagi</span>
+</div>
+</div>
+<!-- Stat 3: Total Denda -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Denda Berjalan</span>
+<div class="flex items-baseline gap-1.5 pt-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">Rp 0</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">savings</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 font-label-xs text-label-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span class="text-on-surface-variant">Akun bebas denda administrasi</span>
+</div>
+</div>
+<!-- Stat 4: Kuota Peminjaman -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm relative overflow-hidden flex flex-col justify-between h-32">
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Sisa Kuota Peminjaman</span>
+<div class="flex items-baseline gap-1.5 pt-1">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">tersedia (2/3 terpakai)</span>
+</div>
+</div>
+<!-- Progress Ring Graphic -->
+<div class="relative w-10 h-10 flex items-center justify-center">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="66.6, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-xs text-[10px] font-bold text-primary">67%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 66.6%;"></div>
+</div>
+</div>
+</div>
+<!-- Main Content Area: Tabs + Loan Cards -->
+<div class="flex flex-col gap-y-4">
+<!-- Tabs Navigation -->
+<div class="flex items-center justify-between bg-surface-container-lowest px-4 rounded-xl shadow-sm">
+<div class="flex items-center gap-8 overflow-x-auto">
+<button class="relative py-4 font-headline-sm text-headline-sm text-primary flex items-center gap-2 font-semibold transition-colors" id="tab-active">
+<span>Sedang Dipinjam</span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary text-label-xs font-label-xs flex items-center justify-center">2</span>
+<span class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"></span>
+</button>
+<button class="relative py-4 font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-2 transition-colors" id="tab-pending">
+<span>Menunggu Persetujuan</span>
+<span class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant text-label-xs font-label-xs flex items-center justify-center">0</span>
+</button>
+<button class="relative py-4 font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-2 transition-colors" id="tab-history">
+<span>Riwayat Selesai</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-label-xs font-label-xs">26</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Urutkan: Jatuh Tempo Terdekat</span>
+</div>
+</div>
+<!-- Active Loans List -->
+<div class="space-y-4">
+<!-- Book Card 1: Urgent (Due in 2 Days) -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 w-full xl:w-7/12">
+<!-- Book Cover Placeholder -->
+<div class="relative w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cover of high school physics textbook Fisika Dasar Kelas XII by Marthen Kanginan showing vibrant scientific diagrams atom models and navy blue educational layout in crisp daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByFIRVqJDpdhEkkQvDS6iXDuuk1dAeWOr-AVaB_Y4R4p8oZ1XvkR1mbAuxSrZ95Tb9XqsTiK-468QD0ZQkXHqaH1Gmwf-_0ku0FmS72tDqBRnQ5-sDpSaXtGnEKJbgM5qrU8EelIVb9A4A3TuKmkvOuxX_2mhsGsQ_UfJi86gX6sj06PgvRlBELEQ9xQPbo4Q4V3G50SkDUJmR3jOi2c3C0SHU6YvL_eQgYBlKjmv2"/>
+<div class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-primary/90 text-on-primary font-label-xs text-[9px] uppercase tracking-wider">
+                SMA XII
+              </div>
+</div>
+<!-- Book Info & Meta -->
+<div class="flex flex-col space-y-2 min-w-0 flex-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs font-medium">Buku Pelajaran</span>
+<span class="font-data-num-sm text-data-num-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">No. Barcode: BK-2024-SMA-0941</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Aktif (Masa Pinjam Berjalan)
+                </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold truncate">Fisika Dasar untuk SMA/MA Kelas XII</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+                  Marthen Kanginan • Penerbit Erlangga (2022)
+                </p>
+</div>
+<!-- Borrow Timeline Progress -->
+<div class="pt-1 flex flex-col gap-1 w-full max-w-md">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-on-surface-variant">
+<span>Pinjam: <strong class="text-on-surface">17 Okt 2024</strong></span>
+<span>Jatuh Tempo: <strong class="text-error">24 Okt 2024</strong></span>
+</div>
+<!-- Timeline progress bar (5 of 7 days passed) -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full transition-all duration-500" style="width: 71%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Due Countdown + Actions -->
+<div class="flex flex-col sm:flex-row xl:flex-col items-start sm:items-center xl:items-end justify-between w-full xl:w-auto gap-4 pt-2 xl:pt-0">
+<!-- High-Contrast Due Soon Alert Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-error-container text-on-error-container shadow-xs">
+<span class="material-symbols-outlined text-[20px] text-error animate-pulse">timer</span>
+<div class="flex flex-col text-left xl:text-right leading-none">
+<span class="font-label-xs text-[10px] uppercase font-bold tracking-wider">Perlu Dikembalikan</span>
+<span class="font-headline-sm text-headline-sm font-bold text-error">2 Hari Lagi</span>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="handleExtend('BK-2024-SMA-0941', 'Fisika Dasar untuk SMA/MA Kelas XII')">
+<span class="material-symbols-outlined text-[18px] text-secondary">update</span>
+<span>Perpanjang (+7 Hari)</span>
+</button>
+<button class="flex-1 sm:flex-none px-3.5 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm transition-colors" onclick="openReturnQrModal('Fisika Dasar SMA XII', 'BK-2024-SMA-0941', '24 Okt 2024')">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>Tampilkan QR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Book Card 2: Safe (Due in 7 Days) -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 w-full xl:w-7/12">
+<!-- Book Cover Placeholder -->
+<div class="relative w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cover of the famous Indonesian novel Laskar Pelangi by Andrea Hirata depicting children on Belitung island beach with vintage painterly lighting in bright natural hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD70l5UjkAGI9TWbaLNeyQpjK5qyLmXR6bqXULQC7W8IuxF9G20NNJQIns4O-yTYAxfO7hWKvWiimLvjtcg7DxT_jb1w_7BeZlzN42gDSgmsaLZ1VaZkx6etS0QOmLEAJvwJfFTUF-q5TMhSuyGOYQLvYiiJIbSIzpQJG_CkUuPqGnn9yc3voS6Uj-AQmzu9hoQhSu4FM9xrue2mW0vNZNjXdjas1um5kkt2UtB9HxJ"/>
+<div class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-secondary/90 text-on-secondary font-label-xs text-[9px] uppercase tracking-wider">
+                Fiksi Sastra
+              </div>
+</div>
+<!-- Book Info & Meta -->
+<div class="flex flex-col space-y-2 min-w-0 flex-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-medium">Koleksi Fiksi</span>
+<span class="font-data-num-sm text-data-num-sm text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded">No. Barcode: BK-2023-NVL-0182</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Aktif
+                </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold truncate">Laskar Pelangi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+                  Andrea Hirata • Bentang Pustaka (Edisi Spesial)
+                </p>
+</div>
+<!-- Borrow Timeline Progress -->
+<div class="pt-1 flex flex-col gap-1 w-full max-w-md">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-on-surface-variant">
+<span>Pinjam: <strong class="text-on-surface">21 Okt 2024</strong></span>
+<span>Jatuh Tempo: <strong class="text-on-surface">28 Okt 2024</strong></span>
+</div>
+<!-- Timeline progress bar (0 of 7 days passed) -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-500" style="width: 14%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Due Countdown + Actions -->
+<div class="flex flex-col sm:flex-row xl:flex-col items-start sm:items-center xl:items-end justify-between w-full xl:w-auto gap-4 pt-2 xl:pt-0">
+<!-- Safe Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-secondary">check_circle</span>
+<div class="flex flex-col text-left xl:text-right leading-none">
+<span class="font-label-xs text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">Status Peminjaman</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">7 Hari Lagi</span>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="handleExtend('BK-2023-NVL-0182', 'Laskar Pelangi')">
+<span class="material-symbols-outlined text-[18px] text-secondary">update</span>
+<span>Perpanjang (+7 Hari)</span>
+</button>
+<button class="flex-1 sm:flex-none px-3.5 py-2 rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" onclick="openReturnQrModal('Laskar Pelangi', 'BK-2023-NVL-0182', '28 Okt 2024')">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>QR Pengembalian</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Bento Section: Ketentuan Sirkulasi Perpustakaan Sekolah -->
+<div class="mt-4 rounded-2xl bg-surface-container-low p-6 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="p-2 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Ketentuan Sirkulasi Perpustakaan Sekolah</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tata cara pengembalian tepat waktu dan aturan perpanjangan mandiri bagi siswa</p>
+</div>
+</div>
+<span class="text-label-xs font-label-xs px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-semibold">SK Kepala Perpustakaan 2024</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<!-- Rule 1: Drop Box Mandiri -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm space-y-2 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">move_to_inbox</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Drop Box Mandiri 24 Jam</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Buku dapat dikembalikan langsung ke kotak <em>Drop Box Lobi Utama</em> tanpa antre. Cukup pindai barcode buku dan masukkan ke slot pengembalian.
+            </p>
+</div>
+<div class="pt-2 text-label-xs font-label-xs text-secondary font-semibold flex items-center gap-1">
+<span>Lokasi: Pintu Sayap Barat</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Rule 2: Jam Operasional Meja Sirkulasi -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm space-y-2 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">access_time</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Verifikasi Fisik Sirkulasi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Petugas melayani verifikasi fisik pada <strong>Senin - Jumat (07.15 - 15.30 WIB)</strong> dan <strong>Sabtu (08.00 - 12.00 WIB)</strong> di Meja Layanan Utama.
+            </p>
+</div>
+<div class="pt-2 text-label-xs font-label-xs text-on-surface-variant font-medium flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Sedang Buka Hari Ini</span>
+</div>
+</div>
+<!-- Rule 3: Syarat Perpanjangan -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm space-y-2 flex flex-col justify-between">
+<div class="space-y-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Aturan Perpanjangan Online</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Perpanjangan online dapat dilakukan <strong>maksimal 1 kali (+7 hari)</strong> selama tidak ada pemesan lain dalam daftar antrean antarsiswa.
+            </p>
+</div>
+<div class="pt-2 text-label-xs font-label-xs text-on-surface-variant">
+<span>Denda keterlambatan: Rp 500 / hari / buku</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Return / Desk Circulation QR Code (Hidden by default) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-primary/40 backdrop-blur-sm hidden" id="qr-modal" style="backdrop-filter: blur(4px);">
+<div class="bg-surface-container-lowest rounded-2xl p-6 w-full max-w-md mx-4 shadow-2xl relative space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px] text-secondary">qr_code_scanner</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">QR Pengembalian Sirkulasi</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-variant flex items-center justify-center text-on-surface transition-colors" onclick="closeReturnQrModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="text-center py-2 space-y-3">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Perlihatkan kode ini kepada petugas sirkulasi atau arahkan pada sensor pemindai Drop Box mandiri.
+        </p>
+<!-- Dynamic Book Info inside Modal -->
+<div class="bg-surface-container-low rounded-xl p-3 text-left space-y-1">
+<div class="font-label-md text-label-md text-primary font-bold truncate" id="modal-book-title">Judul Buku</div>
+<div class="flex justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Barcode: <strong class="text-on-surface" id="modal-book-barcode">BK-XXXX</strong></span>
+<span>Jatuh tempo: <strong class="text-on-surface" id="modal-book-due">Tanggal</strong></span>
+</div>
+</div>
+<!-- QR Code SVG Visualization -->
+<div class="w-48 h-48 mx-auto p-3 bg-surface-container-lowest rounded-xl shadow-md flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 100 100">
+<!-- QR Pattern mockup -->
+<rect fill="currentColor" height="25" rx="3" width="25" x="5" y="5"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="9" y="9"></rect>
+<rect fill="currentColor" height="9" width="9" x="13" y="13"></rect>
+<rect fill="currentColor" height="25" rx="3" width="25" x="70" y="5"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="74" y="9"></rect>
+<rect fill="currentColor" height="9" width="9" x="78" y="13"></rect>
+<rect fill="currentColor" height="25" rx="3" width="25" x="5" y="70"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="9" y="74"></rect>
+<rect fill="currentColor" height="9" width="9" x="13" y="78"></rect>
+<!-- Center data dots -->
+<rect height="6" rx="1" width="8" x="36" y="8"></rect>
+<rect height="6" rx="1" width="12" x="50" y="8"></rect>
+<rect height="6" rx="1" width="18" x="38" y="20"></rect>
+<rect height="6" rx="1" width="18" x="10" y="38"></rect>
+<rect height="10" rx="2" width="10" x="34" y="36"></rect>
+<rect height="8" rx="1" width="12" x="52" y="36"></rect>
+<rect height="6" rx="1" width="18" x="72" y="38"></rect>
+<rect height="12" rx="1" width="8" x="38" y="54"></rect>
+<rect height="8" rx="1" width="16" x="52" y="50"></rect>
+<rect height="10" rx="1" width="14" x="76" y="52"></rect>
+<rect height="18" rx="1" width="12" x="38" y="72"></rect>
+<rect height="8" rx="1" width="10" x="56" y="68"></rect>
+<rect height="18" rx="2" width="20" x="72" y="72"></rect>
+</svg>
+</div>
+<div class="text-center">
+<span class="font-data-num-sm text-data-num-sm text-secondary tracking-widest font-bold">TOKEN: 9024-RTN-20241088</span>
+<p class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">Kode valid selama 30 menit ke depan</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="closeReturnQrModal()">
+          Tutup
+        </button>
+<button class="flex-1 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors flex items-center justify-center gap-1.5" onclick="window.print()">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Cetak Bukti</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-xl shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-msg">Masa pinjam berhasil diperpanjang +7 hari!</span>
+</div>
+</div>
+</div>
+<script>
+  function showToast(message, isError = false) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-msg');
+    const toastIcon = document.getElementById('toast-icon');
+    
+    toastMsg.textContent = message;
+    toastIcon.textContent = isError ? 'error' : 'check_circle';
+    
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+    }, 3500);
+  }
+
+  function handleExtend(barcode, title) {
+    if (confirm(`Apakah Anda ingin memperpanjang masa pinjam untuk "${title}" selama 7 hari?`)) {
+      showToast(`Berhasil! Masa pinjam "${title}" telah diperpanjang 7 hari.`);
+    }
+  }
+
+  function openReturnQrModal(title, barcode, dueDate) {
+    document.getElementById('modal-book-title').textContent = title;
+    document.getElementById('modal-book-barcode').textContent = barcode;
+    document.getElementById('modal-book-due').textContent = dueDate;
+    document.getElementById('qr-modal').classList.remove('hidden');
+  }
+
+  function closeReturnQrModal() {
+    document.getElementById('qr-modal').classList.add('hidden');
+  }
+
+  // Close modal when clicked outside
+  document.getElementById('qr-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeReturnQrModal();
+    }
+  });
+</script></main></div></body></html>
